@@ -1,0 +1,1526 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+html {
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+body {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -10000000;
+}
+
+section {
+  height: 90vh;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+}
+
+button {
+  background: #FF2640;
+  color: #fff;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.main {
+  background-image: url(/src/assets/imgs/main1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+.main .container {
+  position: relative;
+  height: 90%;
+  width: 100%;
+}
+
+.main .container .logo {
+  margin-top: 59px;
+  margin-left: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.main .container .logo h5 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0 1rem;
+}
+
+.main .container .info {
+  margin-left: 10%;
+  position: absolute;
+  bottom: 20%;
+}
+
+.main .container .info h1 {
+  font-size: 3em;
+  width: 60%;
+  font-weight: 200;
+}
+
+.main .container .info button {
+  height: 10vh;
+  width: 35%;
+  margin-top: 5%;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.main .container .info button h6 {
+  font-weight: 400;
+}
+
+.main .container .info button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.loading {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: rgba(255, 38, 64, 0.2);
+  z-index: 0;
+}
+
+.loading .loader {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #fff;
+  font-size: 3em;
+}
+
+.loading .loader h6 {
+  font-weight: 200;
+}
+
+.profile {
+  position: absolute;
+  width: 500%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  z-index: 0;
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
+}
+
+.profile .bgImg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.profile .bgImg img {
+  height: 90%;
+  width: 100%;
+}
+
+.profile .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  position: relative;
+  max-width: 100vw;
+  height: 90vh;
+}
+
+.profile .container .personInfo {
+  position: absolute;
+  bottom: 30%;
+  left: 3%;
+}
+
+.profile .container .personInfo .info .name h6 {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.profile .container .personInfo .info .online {
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profile .container .personInfo .info .online .point {
+  height: .4rem;
+  width: .4rem;
+  border-radius: 50%;
+  background: #FF2640;
+  margin: 8% 8% 0 0;
+}
+
+.profile .container .personInfo .info .online h6 {
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+.profile .container .personInfo .info .distance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.profile .container .personInfo .info .distance h6 {
+  font-weight: 400;
+}
+
+.profile .container .personInfo .info .distance img {
+  height: 1rem;
+  margin-right: .5rem;
+}
+
+.profile .container .characterization {
+  position: absolute;
+  left: 18%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  bottom: 30%;
+}
+
+.profile .container .characterization .info {
+  margin-top: 15%;
+}
+
+.profile .container .characterization .info h6 {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.profile .container .characterization .info .line {
+  width: 20vw;
+  height: .5vh;
+  background: #FFD8D8;
+  margin: 2% 0 0 0;
+}
+
+.profile .container .characterization .info .line .procent {
+  width: 86%;
+  height: 100%;
+  background: #FF2640;
+}
+
+.profile .container .btns {
+  position: absolute;
+  bottom: 15%;
+  left: 3%;
+}
+
+.profile .container .btns button {
+  height: 10vh;
+  width: 12vw;
+  margin: 0 2rem 0 0;
+}
+
+.profile .container .btns button img {
+  margin-right: 5%;
+}
+
+.profile .container .btns .no {
+  background: rgba(255, 255, 255, 0.4);
+  font-size: 1.1em;
+}
+
+.profile .container .btns .no img {
+  height: 20%;
+}
+
+.profile .container .btns .flirt {
+  font-size: 1.1em;
+}
+
+.profile .container .btns .flirt img {
+  height: 25%;
+}
+
+.match {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  position: absolute;
+  z-index: 1000;
+  height: 100%;
+  width: 500%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.match .container {
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: url(/src/assets/imgs/matchBg.png);
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.match .container .info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 90%;
+}
+
+.match .container .info h4 {
+  font-size: 6em;
+  color: #fff;
+  font-weight: 700;
+  margin: 0 auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.match .container .info h5 {
+  margin: 1% 0;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-size: 2.2em;
+  font-weight: 300;
+}
+
+.match .container .info button {
+  height: 10vh;
+  width: 15%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-size: 1.6em;
+  font-weight: 400;
+}
+
+.registration {
+  position: absolute;
+  background-color: rgba(7, 7, 7, 0.705);
+  z-index: 1000;
+  height: 100%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  width: 500%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.registration .container {
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: url(/src/assets/imgs/registerLogo.png);
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  margin-top: -5%;
+}
+
+.registration .container .info {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1rem;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 3%;
+  margin-left: 3%;
+  height: 90%;
+  width: 100%;
+}
+
+.registration .container .info h4 {
+  margin: 0 auto;
+  font-size: 1.4em;
+  width: 30%;
+  text-align: center;
+  font-weight: 300;
+}
+
+.registration .container .info h6 {
+  font-size: 1em;
+  color: #FF2640;
+  margin: -1% 40%;
+  position: absolute;
+}
+
+.registration .container .info form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.registration .container .info form input {
+  width: 20%;
+  height: 7vh;
+  border-radius: .5rem;
+  border: solid 1px #fff;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 1.5% auto;
+  color: #fff;
+  font-weight: 200;
+  padding-left: 1rem;
+}
+
+.registration .container .info form input::-webkit-input-placeholder {
+  color: #fff;
+  font-weight: 200;
+}
+
+.registration .container .info form input:-ms-input-placeholder {
+  color: #fff;
+  font-weight: 200;
+}
+
+.registration .container .info form input::-ms-input-placeholder {
+  color: #fff;
+  font-weight: 200;
+}
+
+.registration .container .info form input::placeholder {
+  color: #fff;
+  font-weight: 200;
+}
+
+.registration .container .info button {
+  height: 10vh;
+  width: 10%;
+  margin: 0 auto;
+}
+
+.secondReg {
+  position: absolute;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  background-color: rgba(238, 124, 124, 0.397);
+}
+
+.secondReg .container {
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: url(/src/assets/imgs/secondRegLogo.png);
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  margin-top: -5%;
+}
+
+.secondReg .container .info {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1rem;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 3%;
+  margin-left: 3%;
+  height: 90%;
+  width: 100%;
+}
+
+.secondReg .container .info h4 {
+  margin: 0 auto;
+  font-size: 1.4em;
+  width: 20%;
+  text-align: center;
+  font-weight: 300;
+}
+
+.secondReg .container .info form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.secondReg .container .info form input {
+  width: 20%;
+  height: 7vh;
+  border-radius: .5rem;
+  border: solid 1px #fff;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 1.5% auto;
+  color: #fff;
+  font-weight: 200;
+  padding-left: 1rem;
+}
+
+.secondReg .container .info form input::-webkit-input-placeholder {
+  color: #fff;
+  font-weight: 200;
+}
+
+.secondReg .container .info form input:-ms-input-placeholder {
+  color: #fff;
+  font-weight: 200;
+}
+
+.secondReg .container .info form input::-ms-input-placeholder {
+  color: #fff;
+  font-weight: 200;
+}
+
+.secondReg .container .info form input::placeholder {
+  color: #fff;
+  font-weight: 200;
+}
+
+.secondReg .container .info button {
+  height: 10vh;
+  width: 10%;
+  margin: 0 auto;
+}
+
+footer {
+  height: 10vh;
+  width: 100%;
+  background: #170000;
+  position: fixed;
+  bottom: 0;
+  padding: 0 10%;
+  z-index: 10000;
+}
+
+footer .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+footer .container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10%;
+}
+
+footer .container .content img {
+  height: 50%;
+  margin: -2% 3% 0 0;
+}
+
+footer .container .content h6 {
+  font-size: 1em;
+  font-weight: 200;
+}
+
+@media screen and (min-width: 280px) and (max-width: 767px) {
+  .main {
+    background-image: url(/src/assets/imgs/main1mobile.png);
+  }
+  .main .container .logo {
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+  .main .container .logo img {
+    width: 10%;
+  }
+  .main .container .logo h5 {
+    font-size: 1.5em;
+  }
+  .main .container .info {
+    margin-left: 10%;
+    position: absolute;
+    bottom: 5%;
+  }
+  .main .container .info h1 {
+    font-size: 2.2em;
+    width: 100%;
+  }
+  .main .container .info button {
+    height: 10vh;
+    width: 65%;
+    font-size: 1em;
+  }
+  .loading {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    background: rgba(255, 38, 64, 0.2);
+    z-index: 0;
+  }
+  .loading .loader {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: #fff;
+    font-size: 3em;
+  }
+  .loading .loader h6 {
+    font-weight: 200;
+  }
+  .profile {
+    position: absolute;
+    width: 500%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    z-index: 0;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
+  }
+  .profile .container {
+    height: 100%;
+    width: 100%;
+  }
+  .profile .container .bgImg {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .profile .container .bgImg img {
+    height: 100%;
+    width: 100%;
+  }
+  .profile .container .personInfo {
+    bottom: 20%;
+    left: 3%;
+  }
+  .profile .container .personInfo .info .name h6 {
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+  .profile .container .personInfo .info .online {
+    margin: 1rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .profile .container .personInfo .info .online .point {
+    height: .4rem;
+    width: .4rem;
+    border-radius: 50%;
+    background: #FF2640;
+    margin: 8% 8% 0 0;
+  }
+  .profile .container .personInfo .info .online h6 {
+    font-weight: 400;
+    font-size: 1.1em;
+  }
+  .profile .container .personInfo .info .distance {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .profile .container .personInfo .info .distance h6 {
+    font-weight: 400;
+  }
+  .profile .container .personInfo .info .distance i {
+    color: #fff;
+    font-size: 0.8em;
+    margin-right: .3rem;
+  }
+  .profile .container .characterization {
+    left: 45%;
+    bottom: 20%;
+  }
+  .profile .container .characterization .info {
+    margin-top: 15%;
+  }
+  .profile .container .characterization .info h6 {
+    font-size: 1.1em;
+    font-weight: 400;
+  }
+  .profile .container .characterization .info .line {
+    width: 45vw;
+    height: .8vh;
+  }
+  .profile .container .characterization .info .line .procent {
+    width: 86%;
+    height: 100%;
+    background: #FF2640;
+  }
+  .profile .container .btns {
+    bottom: 5%;
+    left: 3%;
+  }
+  .profile .container .btns button {
+    height: 8vh;
+    width: 30vw;
+  }
+  .profile .container .btns button img {
+    margin-right: 5%;
+  }
+  .profile .container .btns .no {
+    font-size: 1.1em;
+  }
+  .profile .container .btns .no img {
+    height: 25%;
+  }
+  .profile .container .btns .flirt {
+    font-size: 1.1em;
+  }
+  .profile .container .btns .flirt img {
+    height: 30%;
+  }
+  .match {
+    z-index: 1000;
+    height: 100%;
+    width: 500%;
+  }
+  .match .container {
+    background-image: url(/src/assets/imgs/matchBg.png);
+    background-position: 10% 50%;
+    background-size: 90%;
+    height: 100%;
+    width: 100%;
+  }
+  .match .container .info {
+    height: 90%;
+  }
+  .match .container .info h4 {
+    font-size: 3em;
+  }
+  .match .container .info h5 {
+    font-size: 1.2em;
+    margin: 3% 0;
+  }
+  .match .container .info button {
+    position: absolute;
+    height: 8vh;
+    width: 50%;
+    font-size: 1.3em;
+    bottom: 35%;
+  }
+  .registration {
+    height: 100%;
+  }
+  .registration .container {
+    background-image: url(/src/assets/imgs/registerLogo.png);
+    background-position: 10% 50%;
+    background-size: 90%;
+    height: 100%;
+    width: 100%;
+  }
+  .registration .container .info {
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 1rem;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin-top: 3%;
+    margin-left: 3%;
+    height: 90%;
+    width: 100%;
+  }
+  .registration .container .info h4 {
+    font-size: 1.2em;
+    width: 80%;
+  }
+  .registration .container .info h6 {
+    font-size: .8em;
+    margin: -3% 15%;
+  }
+  .registration .container .info form input {
+    width: 70%;
+    height: 7vh;
+    margin: 2.5% auto;
+  }
+  .registration .container .info button {
+    height: 8vh;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .secondReg .container {
+    background-position: 10% 50%;
+    background-size: 90%;
+    height: 100%;
+    width: 100%;
+  }
+  .secondReg .container .info {
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 1rem;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin-top: 3%;
+    margin-left: 3%;
+    height: 90%;
+    width: 100%;
+  }
+  .secondReg .container .info h4 {
+    font-size: 1.2em;
+    width: 50%;
+  }
+  .secondReg .container .info form input {
+    width: 70%;
+    height: 7vh;
+    margin: 2.5% auto;
+  }
+  .secondReg .container .info button {
+    height: 8vh;
+    width: 50%;
+    margin: 0 auto;
+  }
+  footer {
+    height: 11vh;
+    width: 100%;
+    background: #170000;
+    position: fixed;
+    bottom: 0;
+    padding: 0 2%;
+    z-index: 10000;
+  }
+  footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  footer .container .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 7%;
+  }
+  footer .container .content:first-child {
+    display: none;
+  }
+  footer .container .content img {
+    height: 50%;
+    margin: -2% 3% 0 0;
+  }
+  footer .container .content h6 {
+    font-size: .75em;
+    width: 180%;
+    font-weight: 200;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  section {
+    height: 100vh;
+    width: 100%;
+  }
+  body {
+    position: absolute;
+    height: 110vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: -10000000;
+  }
+  .profile .bgImg img {
+    height: 100%;
+  }
+  .profile .container {
+    height: 100vh;
+  }
+  .registration {
+    height: 105vh;
+  }
+  footer {
+    height: 50vh;
+    width: 100%;
+    background: #170000;
+    position: fixed;
+    bottom: 0;
+    padding: 0 2%;
+    z-index: 10000;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  footer .menu-open {
+    position: absolute;
+    margin-top: -10%;
+    right: 5%;
+    display: none;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  footer .menu-open.active {
+    display: block;
+  }
+  footer .menu-open .point {
+    right: 0;
+    height: .3rem;
+    width: .3rem;
+    background-color: #FF2640;
+    border-radius: 50%;
+    margin-top: .2rem;
+    margin-left: 50%;
+  }
+  footer .menu-close {
+    position: absolute;
+    margin-top: -10%;
+    right: 5%;
+    height: 1.3rem;
+    width: 1.3rem;
+    background-image: url(/src/assets/imgs/close.png);
+    background-size: 100%;
+    display: none;
+  }
+  footer .menu-close.active {
+    display: block;
+  }
+  footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .container .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 6% auto;
+  }
+  footer .container .content:first-child {
+    display: block;
+    margin-top: 15%;
+  }
+  footer .container .content img {
+    display: none;
+  }
+  footer .container .content h6 {
+    font-size: .75em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    background: url(/src/assets/imgs/main1planshet.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .main .container .info {
+    bottom: 25%;
+  }
+  .main .container .info button {
+    height: 8vh;
+    width: 40%;
+    margin-top: 5%;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+  .main .container .info button h6 {
+    font-weight: 400;
+  }
+  .main .container .info button:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .loading {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    background: rgba(255, 38, 64, 0.2);
+    z-index: 0;
+  }
+  .loading .loader {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: #fff;
+    font-size: 3em;
+  }
+  .loading .loader h6 {
+    font-weight: 200;
+  }
+  .profile .container {
+    height: 100%;
+    width: 100%;
+  }
+  .profile .container .bgImg {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .profile .container .bgImg img {
+    height: 100%;
+    width: 100%;
+  }
+  .profile .container .personInfo {
+    bottom: 18%;
+    left: 3%;
+  }
+  .profile .container .personInfo .info .name h6 {
+    font-weight: 600;
+    font-size: 3em;
+  }
+  .profile .container .personInfo .info .online h6 {
+    font-size: 2em;
+  }
+  .profile .container .personInfo .info .distance h6 {
+    font-weight: 400;
+    font-size: 1.1em;
+  }
+  .profile .container .personInfo .info .distance i {
+    font-size: 1em;
+    margin-right: .5rem;
+  }
+  .profile .container .characterization {
+    left: 33%;
+    bottom: 18%;
+  }
+  .profile .container .characterization .info {
+    margin-top: 15%;
+  }
+  .profile .container .characterization .info h6 {
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+  .profile .container .characterization .info .line {
+    width: 35vw;
+    height: .5vh;
+  }
+  .profile .container .characterization .info .line .procent {
+    width: 86%;
+    height: 100%;
+    background: #FF2640;
+  }
+  .profile .container .btns {
+    bottom: 5%;
+    left: 3%;
+  }
+  .profile .container .btns button {
+    height: 8vh;
+    width: 25vw;
+  }
+  .profile .container .btns button img {
+    margin-right: 5%;
+  }
+  .profile .container .btns .no {
+    font-size: 1.1em;
+  }
+  .profile .container .btns .no img {
+    height: 20%;
+  }
+  .profile .container .btns .flirt {
+    font-size: 1.1em;
+  }
+  .profile .container .btns .flirt img {
+    height: 25%;
+  }
+  .match {
+    height: 100%;
+  }
+  .match .container {
+    background-image: url(/src/assets/imgs/matchBg.png);
+    background-position: 30% 50%;
+    background-size: 70%;
+    height: 100%;
+    width: 100%;
+  }
+  .match .container .info {
+    height: 90%;
+  }
+  .match .container .info h4 {
+    font-size: 6em;
+  }
+  .match .container .info h5 {
+    font-size: 1.7em;
+    margin: 3% 0;
+  }
+  .match .container .info button {
+    position: absolute;
+    height: 8vh;
+    width: 30%;
+    font-size: 1.7em;
+    bottom: 35%;
+  }
+  .registration {
+    height: 100%;
+  }
+  .registration .container {
+    background-image: url(/src/assets/imgs/registerLogo.png);
+    background-position: center;
+    background-size: 70%;
+    height: 100%;
+    width: 100%;
+  }
+  .registration .container .info {
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 1rem;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin-top: 3%;
+    margin-left: 3%;
+    height: 90%;
+    width: 100%;
+  }
+  .registration .container .info h4 {
+    font-size: 1.7em;
+    width: 50%;
+  }
+  .registration .container .info h6 {
+    font-size: .8em;
+    margin: -3% 15%;
+  }
+  .registration .container .info form input {
+    width: 50%;
+    height: 7vh;
+    margin: 2.5% auto;
+    padding-left: 3%;
+    font-size: 1.2em;
+  }
+  .registration .container .info form input::-webkit-input-placeholder {
+    font-size: 1.2em;
+  }
+  .registration .container .info form input:-ms-input-placeholder {
+    font-size: 1.2em;
+  }
+  .registration .container .info form input::-ms-input-placeholder {
+    font-size: 1.2em;
+  }
+  .registration .container .info form input::placeholder {
+    font-size: 1.2em;
+  }
+  .registration .container .info button {
+    height: 8vh;
+    margin: 0 auto;
+    width: 30%;
+    font-size: 1.5em;
+  }
+  .secondReg .container {
+    background-position: 10% 50%;
+    background-size: 90%;
+    height: 100%;
+    width: 100%;
+  }
+  .secondReg .container .info {
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 1rem;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin-top: 3%;
+    margin-left: 3%;
+    height: 90%;
+    width: 100%;
+  }
+  .secondReg .container .info h4 {
+    font-size: 1.7em;
+    width: 40%;
+  }
+  .secondReg .container .info form input {
+    width: 50%;
+    height: 7vh;
+    margin: 2.5% auto;
+    padding-left: 3%;
+    font-size: 1.2em;
+  }
+  .secondReg .container .info form input::-webkit-input-placeholder {
+    font-size: 1.2em;
+  }
+  .secondReg .container .info form input:-ms-input-placeholder {
+    font-size: 1.2em;
+  }
+  .secondReg .container .info form input::-ms-input-placeholder {
+    font-size: 1.2em;
+  }
+  .secondReg .container .info form input::placeholder {
+    font-size: 1.2em;
+  }
+  .secondReg .container .info button {
+    height: 8vh;
+    margin: 0 auto;
+    width: 30%;
+    font-size: 1.5em;
+  }
+  footer {
+    height: 10vh;
+    width: 100%;
+    background: #170000;
+    position: fixed;
+    bottom: 0;
+    padding: 0 1%;
+  }
+  footer .container {
+    gap: 0;
+    margin: 0 2%;
+  }
+  footer .container .content {
+    margin-top: 20%;
+    margin-left: -10%;
+  }
+  footer .container .content img {
+    margin: -2% 4% 0 0;
+  }
+  footer .container .content:nth-child(3) {
+    margin-left: -30%;
+    width: 120%;
+  }
+  footer .container .content h6 {
+    font-size: 1.1em;
+    width: 120%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1270px) {
+  .main {
+    background: url(/src/assets/imgs/main1planshet.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .main .container .info {
+    bottom: 25%;
+  }
+  .main .container .info h1 {
+    font-size: 3em;
+  }
+  .main .container .info button {
+    height: 6vh;
+    width: 40%;
+    margin-top: 15%;
+    font-size: 1.3em;
+    cursor: pointer;
+  }
+  .main .container .info button:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .loading {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    background: rgba(255, 38, 64, 0.2);
+    z-index: 0;
+  }
+  .loading .loader {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: #fff;
+    font-size: 3em;
+  }
+  .loading .loader h6 {
+    font-weight: 200;
+  }
+  .profile .bgImg {
+    height: 100%;
+    width: 100%;
+  }
+  .profile .bgImg img {
+    height: 100%;
+  }
+  .profile .container .personInfo {
+    bottom: 16%;
+    left: 3%;
+  }
+  .profile .container .personInfo .info .name h6 {
+    font-weight: 600;
+    font-size: 3em;
+  }
+  .profile .container .personInfo .info .online h6 {
+    font-size: 2em;
+  }
+  .profile .container .personInfo .info .distance h6 {
+    font-weight: 400;
+    font-size: 1.1em;
+  }
+  .profile .container .personInfo .info .distance i {
+    font-size: 1em;
+    margin-right: .5rem;
+  }
+  .profile .container .characterization {
+    left: 28%;
+    bottom: 16%;
+  }
+  .profile .container .characterization .info {
+    margin-top: 15%;
+  }
+  .profile .container .characterization .info h6 {
+    font-size: 1.5em;
+  }
+  .profile .container .characterization .info .line {
+    width: 30vw;
+    height: .5vh;
+  }
+  .profile .container .characterization .info .line .procent {
+    width: 86%;
+    height: 100%;
+    background: #FF2640;
+  }
+  .profile .container .btns {
+    bottom: 5%;
+    left: 3%;
+  }
+  .profile .container .btns button {
+    height: 6vh;
+    width: 20vw;
+  }
+  .profile .container .btns button img {
+    margin-right: 5%;
+  }
+  .profile .container .btns .no {
+    font-size: 1.4em;
+  }
+  .profile .container .btns .no img {
+    height: 22%;
+  }
+  .profile .container .btns .flirt {
+    font-size: 1.4em;
+  }
+  .profile .container .btns .flirt img {
+    height: 27%;
+  }
+  .match {
+    height: 100%;
+  }
+  .match .container {
+    background-image: url(/src/assets/imgs/matchBg.png);
+    background-position: 30% 50%;
+    background-size: 70%;
+    height: 100%;
+    width: 100%;
+  }
+  .match .container .info {
+    height: 90%;
+  }
+  .match .container .info h4 {
+    font-size: 6em;
+  }
+  .match .container .info h5 {
+    font-size: 1.7em;
+    margin: 3% 0;
+  }
+  .match .container .info button {
+    position: absolute;
+    height: 6vh;
+    width: 30%;
+    font-size: 1.7em;
+    bottom: 35%;
+  }
+  .registration {
+    height: 100%;
+  }
+  .registration .container {
+    background-image: url(/src/assets/imgs/registerLogo.png);
+    background-position: center;
+    background-size: 70%;
+    height: 100%;
+    width: 100%;
+  }
+  .registration .container .info {
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 1rem;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin-top: 3%;
+    margin-left: 3%;
+    height: 90%;
+    width: 100%;
+  }
+  .registration .container .info h4 {
+    font-size: 2em;
+    width: 50%;
+  }
+  .registration .container .info h6 {
+    font-size: .8em;
+    margin: -3% 15%;
+  }
+  .registration .container .info form input {
+    width: 50%;
+    height: 7vh;
+    margin: 2.5% auto;
+    padding-left: 3%;
+    font-size: 1.2em;
+  }
+  .registration .container .info form input::-webkit-input-placeholder {
+    font-size: 1.2em;
+  }
+  .registration .container .info form input:-ms-input-placeholder {
+    font-size: 1.2em;
+  }
+  .registration .container .info form input::-ms-input-placeholder {
+    font-size: 1.2em;
+  }
+  .registration .container .info form input::placeholder {
+    font-size: 1.2em;
+  }
+  .registration .container .info button {
+    height: 6vh;
+    margin: 0 auto;
+    width: 30%;
+    font-size: 1.5em;
+  }
+  .secondReg .container {
+    background-position: 10% 50%;
+    background-size: 90%;
+    height: 100%;
+    width: 100%;
+  }
+  .secondReg .container .info {
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 1rem;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin-top: 3%;
+    margin-left: 3%;
+    height: 90%;
+    width: 100%;
+  }
+  .secondReg .container .info h4 {
+    font-size: 2.2em;
+    width: 35%;
+  }
+  .secondReg .container .info form input {
+    width: 50%;
+    height: 7vh;
+    margin: 2.5% auto;
+    padding-left: 3%;
+    font-size: 1.2em;
+  }
+  .secondReg .container .info form input::-webkit-input-placeholder {
+    font-size: 1.2em;
+  }
+  .secondReg .container .info form input:-ms-input-placeholder {
+    font-size: 1.2em;
+  }
+  .secondReg .container .info form input::-ms-input-placeholder {
+    font-size: 1.2em;
+  }
+  .secondReg .container .info form input::placeholder {
+    font-size: 1.2em;
+  }
+  .secondReg .container .info button {
+    height: 6vh;
+    margin: 0 auto;
+    width: 30%;
+    font-size: 1.5em;
+  }
+  footer {
+    padding: 0 5%;
+  }
+  footer .container {
+    gap: 1.3rem;
+  }
+  footer .container .content {
+    margin: 20% 0;
+    margin-left: -15%;
+  }
+  footer .container .content img {
+    margin: -2% 4% 0 0;
+  }
+  footer .container .content:nth-child(2) {
+    margin-left: -30%;
+  }
+  footer .container .content:nth-child(3) {
+    margin: 20% 0 0 -45%;
+    width: 120%;
+  }
+  footer .container .content h6 {
+    font-size: 1.5em;
+    width: 120%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
